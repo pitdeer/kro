@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+<title>Index</title>
+
+{% block body %}
+
+	{% for post in posts %}
+
+	<p><a href="{% url 'posts' %}">{{ post.title }}</p>
+	{{ post.category }}</br>
+	{{ post.date }}
+	 <br/>
+	 <br/>
+	 <br/>
+
+	{% endfor %}
+
+{% endblock %}
